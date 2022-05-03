@@ -4,7 +4,7 @@ const transporter = require("../configs/mail");
 require("dotenv").config();
 
 const generateToken = (user) => {
-  return jwtoken.sign({ user }, process.env.SECRET_KEY);
+  return jwtoken.sign({ user } , `mamaearth`);
 };
 
 const register = async (req, res) => {
