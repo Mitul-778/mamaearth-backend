@@ -11,6 +11,7 @@ passport.use(
       clientID: `68167193531-e6l11r44f5kg9q5emb1uk3nuk7i6geee.apps.googleusercontent.com`,
       clientSecret: `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`,
       callbackURL: "https://mama-earth.herokuapp.com/auth/google/callback",
+      scope: ['profile', 'email'],
     },
     async function (accessToken, refreshToken, profile, cb) {
       let user = await User.findOne({ email: profile?._json?.email })
