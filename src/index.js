@@ -6,12 +6,13 @@ app.use(cors());
 
 const userController = require("./controllers/user.controller");
 const { register, login, generateToken } = require("./controllers/auth.controller")
+const babyController = require("./controllers/baby.controller")
 
 
 app.use("/users", userController);
 app.use("/login",login)
 app.use("/register", register);
-
+app.use("/baby_page", babyController)
 
 
 
