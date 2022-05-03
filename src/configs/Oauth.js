@@ -4,12 +4,18 @@ const { v4: uuidv4 } = require("uuid");
 const User = require("../models/user.model");
 
 require("dotenv").config();
+const aws = require('aws-sdk');
+
+let s3 = new aws.S3({
+  SECRET: process.env.S3_SECRET,
+  ID : process.env.S3_ID,
+});
 
 passport.use(
   new GoogleStrategy(
     {
-      clientID: `68167193531-e6l11r44f5kg9q5emb1uk3nuk7i6geee.apps.googleusercontent.com`,
-      clientSecret: `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`,
+      clientID: s3.config.ID,
+      clientSecret: s3.config.SECRET,
       callbackURL: "https://mama-earth.herokuapp.com/auth/google/callback",
       scope: ['profile', 'email'],
     },

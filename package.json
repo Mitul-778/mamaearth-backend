@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Mitul-778/mamaearth-backend#readme",
   "dependencies": {
+    "aws-sdk": "^2.1126.0",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
