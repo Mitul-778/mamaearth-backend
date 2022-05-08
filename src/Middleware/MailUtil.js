@@ -45,7 +45,7 @@ const sendOTP = async(user, OTP)=>{
                 <h1 class="m_-7373064222375084159greeting">
                   Hello,&nbsp; ${user.first_name}
                 </h1>
-                <p>Thank you for Purchasing the Course !</p>
+                <p>Thank you for Purchasing the Products !</p>
                 <p>OTP for Payment is : <b> ${OTP}</b></p>
                 <p>Happy Shopping !</p>
                 <p>
