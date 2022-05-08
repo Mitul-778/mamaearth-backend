@@ -8,12 +8,14 @@ const userController = require("./controllers/user.controller");
 const { register, login, generateToken } = require("./controllers/auth.controller")
 const babyController = require("./controllers/baby.controller")
 const passport = require("./configs/Oauth")
+const otpController = require('./controllers/otp.controller')
 
 
 app.use("/users", userController);
 app.use("/login",login)
 app.use("/register", register);
 app.use("/baby_page", babyController)
+app.use("/otp",otpController)
 
 app.get(
     "/auth/google",
